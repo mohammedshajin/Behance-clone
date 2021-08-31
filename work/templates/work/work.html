@@ -1,2 +1,12 @@
 {% extends 'main.html' %}
 
+{% block content %}
+{% for work in works %}
+
+<p>{{work.title}}</p>
+<img src="{{work.Cover.url}}" alt="cover">
+<a href="{% url 'work_single' work.id %}">view</a>
+
+
+{% endfor %}
+{% endblock content %}
