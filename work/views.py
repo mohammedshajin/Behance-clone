@@ -15,7 +15,7 @@ def work_single(request, pk):
 def creatework(request):
     form = Workform()
     if request.method == 'POST':
-        form=Workform(request.POST)
+        form=Workform(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('work')
