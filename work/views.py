@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 from .models import Work
 from .forms import Workform
+from django.contrib.auth.decorators import login_required
+
 
 def work(request):
     works = Work.objects.all()
@@ -12,6 +14,7 @@ def work_single(request, pk):
     context = {'work':work}
     return render(request, 'work/work_single.html', context)
 
+@login_required(login_url="login")
 def creatework(request):
     form = Workform()
     if request.method == 'POST':
