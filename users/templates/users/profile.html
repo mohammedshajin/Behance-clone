@@ -3,4 +3,46 @@
 {% block content %}
 
 
+<section>
+    <div class="banner-position">
+        <i class="fas fa-arrow-circle-down fa-3x" ></i>
+        <p>Add a Banner Image</p>
+        <small>Optimal dimensions 3200 x 410px</small>
+    </div>
+    <div class="menu">
+        <div class="menu-options">
+            <button>Work</button>
+            <button>Livestreams</button>
+            <button>Moodboards</button>
+            <button>Appreciations</button>
+            <button>Insights</button>
+            <button>Drafts</button>
+        </div>
+        {% for work in works %}
+        <div class="create-project">
+            <div class="add-project">
+                <i class="fas fa-plus-circle fa-lg"></i>
+            </div>
+            <button>Create a Project</button>
+            <p>Get feedback, views, and appreciations. Public projects can be featured by our curators.</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div class="profile-card">
+        <div class="profile-pic">
+            <img src="{{profile.dp.url}}" alt="">
+        </div>
+        <h2>{{profile.name}}</h2>
+        <div class="user-location">
+            <p><i class="fas fa-map-marker-alt"></i>United Kingdom</p>
+        </div>
+        <button><i class="fas fa-pen"></i><a href="{% url 'edit-account' %}">Edit Your Profile</a></button>
+        <p>MEMBER SINCE: SEPTEMBER 21, 2017</p>
+    </div>
+
+
+
+
+</section>
 {% endblock content %}

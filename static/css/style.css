@@ -1,0 +1,234 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 53px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 23px;
+  border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .left-nav {
+  display: flex;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+header .left-nav img {
+  margin-right: 18px;
+  height: 15px;
+}
+
+header .left-nav ul {
+  list-style: none;
+}
+
+header .left-nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+header .input-container {
+  position: relative;
+}
+
+header .input-container input {
+  width: 400px;
+  height: 33px;
+  border-radius: 20px;
+  border: 2px solid #dfdfdf;
+  padding: 10px 0px 10px 30px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header .input-container img {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+header .right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .right-nav button {
+  width: 144px;
+  height: 33px;
+  border-radius: 20px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  border: 1px solid #dfdfdf;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+header .right-nav i {
+  margin-right: 15px;
+}
+
+header .right-nav .profile {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: turquoise;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+header .right-nav .profile img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.project-container {
+  height: max-content;
+  margin: 26px;
+  width: auto;
+}
+
+.project-container h2 {
+  font-size: 18px;
+}
+
+.project-container .project-wrapper {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-container .project-wrapper .projects {
+  margin-top: 30px;
+  height: 317px;
+  width: 351px;
+  border-radius: 6px 6px 0px 0px;
+  overflow: hidden;
+}
+
+.project-container .project-wrapper .projects img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-container .project-wrapper .projects-info {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 2px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.project-container .project-wrapper .projects-info .user {
+  display: flex;
+}
+
+.project-container .project-wrapper .projects-info .user img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.project-container .project-wrapper .projects-info .user p {
+  font-size: 13px;
+}
+
+.project-container .project-wrapper .projects-info .photo-stats {
+  display: flex;
+  font-size: 12px;
+  color: #696969;
+}
+
+.project-container .project-wrapper .projects-info .photo-stats p {
+  margin-right: 10px;
+}
+
+.project-container .project-wrapper .projects-info .photo-stats p .fas {
+  padding-right: 4px;
+}
+/*# sourceMappingURL=style.css.map */

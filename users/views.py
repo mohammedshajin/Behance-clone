@@ -1,11 +1,14 @@
+from work.models import Profile
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
-def profile(request):
-    return render(request, 'users/profile.html')
+from .forms import ProfileForm
+
+
 
 def loginUser(request):
     page = "login"
@@ -59,5 +62,30 @@ def registerUser(request):
     context = {'page':page, 'form':form}
 
     return render(request, 'users/login_register.html', context)
+
+@login_required(login_url='login')
+def userAccount(request):
+    profile = request.user.profile
+    works = profile.work_set.all()
+
+
+    context = {'profile':profile, 'works': works}
+
+    return render(request, 'users/profile.html', context) 
+
+
+@login_required(login_url='login')
+def editAccount(request):
+    profile=request.user.profile
+    form = ProfileForm(instance=profile)
     
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+
+    context = {'form': form}
+    return render(request, 'users/profile_form.html', context) 
+
 

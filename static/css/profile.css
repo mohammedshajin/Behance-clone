@@ -1,0 +1,410 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 53px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 23px;
+  border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .left-nav {
+  display: flex;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+header .left-nav img {
+  margin-right: 18px;
+  height: 15px;
+}
+
+header .left-nav ul {
+  list-style: none;
+}
+
+header .left-nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+header .input-container {
+  position: relative;
+}
+
+header .input-container input {
+  width: 400px;
+  height: 33px;
+  border-radius: 20px;
+  border: 2px solid #dfdfdf;
+  padding: 10px 0px 10px 30px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header .input-container img {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+header .right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .right-nav button {
+  width: 144px;
+  height: 33px;
+  border-radius: 20px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  border: 1px solid #dfdfdf;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+header .right-nav i {
+  margin-right: 15px;
+}
+
+header .right-nav .profile {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: turquoise;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+header .right-nav .profile img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+}
+
+section .banner-position {
+  width: 100%;
+  height: 209px;
+  background-color: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .banner-position:hover {
+  background-color: #3b4e6e;
+}
+
+section .banner-position .fas {
+  color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+section .banner-position p {
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+
+section .banner-position small {
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+section .menu {
+  width: 100%;
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .menu-options {
+  height: 63px;
+  width: 100%;
+  margin: 30px 0px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .menu-options button {
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 14px;
+  color: #191919;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  margin: 0px 4px;
+  background-color: transparent;
+}
+
+section .menu-options button:nth-child(1) {
+  background-color: #191919;
+  color: white;
+}
+
+section .menu-options button:nth-child(5), section .menu-options button:nth-child(6) {
+  color: #696969;
+}
+
+section .menu-options button:nth-child(2):hover, section .menu-options button:nth-child(3):hover, section .menu-options button:nth-child(4):hover, section .menu-options button:nth-child(5):hover, section .menu-options button:nth-child(6):hover {
+  background-color: #ececec;
+}
+
+section .menu .create-project {
+  background-color: #fff;
+  height: 250px;
+  width: 320px;
+  margin-left: 460px;
+  border: 1px dashed #c4bdbd;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .menu .create-project .add-project {
+  background-color: #dee8ff;
+  height: 73px;
+  width: 73px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .menu .create-project .add-project .fas {
+  color: #0057ff;
+}
+
+section .menu .create-project button {
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 14px;
+  color: #191919;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  margin: 20px 4px 10px;
+  background-color: transparent;
+}
+
+section .menu .create-project button:hover {
+  background-color: #ececec;
+}
+
+section .menu .create-project p {
+  text-align: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #959595;
+  margin: 10px 20px 10px;
+}
+
+section .profile-card {
+  height: 446px;
+  width: 362px;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .profile-card .profile-pic {
+  height: 110px;
+  width: 110px;
+  position: relative;
+}
+
+section .profile-card .profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section .profile-card .profile-pic::after {
+  content: '+';
+  color: #fff;
+  height: 22px;
+  text-align: center;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #0057ff;
+}
+
+section .profile-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191919;
+  max-width: 300px;
+  margin: 20px 0px;
+}
+
+section .profile-card .user-location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #696969;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+section .profile-card .user-location .fas {
+  margin-right: 8px;
+}
+
+section .profile-card button {
+  width: 296px;
+  height: 40px;
+  text-align: center;
+  background-color: #0057ff;
+  border-radius: 20px;
+  border: 1px solid #0057ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+section .profile-card button .fas {
+  color: #fff;
+  margin-right: 8px;
+}
+
+section .profile-card button:hover {
+  background-color: #013ecb;
+}
+
+section .profile-card p {
+  margin: 20px 0px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #191919;
+}
+/*# sourceMappingURL=profile.css.map */

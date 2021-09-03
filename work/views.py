@@ -16,11 +16,14 @@ def work_single(request, pk):
 
 @login_required(login_url="login")
 def creatework(request):
+    profile = request.user.profile
     form = Workform()
     if request.method == 'POST':
         form=Workform(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            work = form.save(commit=False)
+            work.profile = profile
+            work.save()
             return redirect('work')
     
     context = {'form':form}
