@@ -8,4 +8,22 @@
 <p>{{work.title}}</p>
 <p>{{work.profile.name}}</p>
 
+<form action="{% url 'work_single' work.id %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" >
+</form>
+
+{% for comment in work.comment_set.all %}
+{% if comment.text %}
+<h2>Comments</h2>
+<br>
+
+<p>{{comment.text}}</p>
+<p>{{comment.profile.name}}</p>
+<p>{{comment.coment_date}}</p>
+{% endif %}
+<br>
+{% endfor %}
+
 {% endblock content %}

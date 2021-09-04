@@ -1,6 +1,7 @@
+from django.forms.forms import Form
 from django.shortcuts import redirect, render
 from .models import Work
-from .forms import Workform
+from .forms import Workform, Commentform
 from django.contrib.auth.decorators import login_required
 from users.models import Profile
 from django.db.models import Q
@@ -26,7 +27,17 @@ def work(request):
 
 def work_single(request, pk):
     work = Work.objects.get(id=pk)
-    context = {'work':work}
+    form =Commentform()
+
+    if request.method == 'POST':
+        form = Commentform(request.POST)
+        comment = form.save(commit=False)
+        comment.work = work
+        comment.profile = request.user.profile
+        comment.save()
+        return redirect('work_single', pk=work.id)
+
+    context = {'work':work, 'form':form}
     return render(request, 'work/work_single.html', context)
 
 @login_required(login_url="login")

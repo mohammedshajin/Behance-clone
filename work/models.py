@@ -1,4 +1,5 @@
 
+from typing import Text
 from django.db import models
 from users.models import Profile
 
@@ -27,9 +28,9 @@ class Tools(models.Model):
         return self.name
 
 class Comment(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     work = models.ForeignKey(Work, on_delete=models.CASCADE)
-
-    Comment = models.TextField()
+    text = models.TextField(null=True, blank=True)
     coment_date=models.DateTimeField(auto_now_add=True)
 
 class Appreciate(models.Model):

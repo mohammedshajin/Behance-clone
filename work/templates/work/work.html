@@ -12,7 +12,7 @@
 
         <!-- First Project Card -->
         <div class="projects">
-            <img src="{{work.Cover.url}}" alt="">
+           <a href="{% url 'work_single' work.id %}"><img src="{{work.Cover.url}}" alt=""></a> 
             <div class="projects-info">
                 <div class="user">
                     <img src="image/users/user1.jpg" alt="">
