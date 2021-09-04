@@ -26,35 +26,9 @@
         </div>
 
         {% endfor %}
-
-
-        
         
     </div>
 </section>
-{% if works.has_other_pages %}
-        <div>
-            <ul>
-                {% if works.has_previous %}
-                <li><a href="?page={{works.previous_page_number}}">&#10094; Prev</a></li>
-                {% endif %}
-
-                {% for page in paginator.page_range %}
-
-                {% if page == works.number %}
-                <li><a href="?page={{page}}" style="color:red;" >{{page}}</a></li>
-                {% else %}
-                <li><a href="?page={{page}}">{{page}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% if works.has_next %}
-                <li><a href="?page={{works.next_page_number}}">Next &#10095;</a></li>
-                {% endif %}
-
-
-            </ul>
-        </div>
-        {% endif %}
 
 
 
