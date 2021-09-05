@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.deletion import SET_NULL
 
 
 class Profile(models.Model):
@@ -19,3 +20,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user.username)
+
+
+

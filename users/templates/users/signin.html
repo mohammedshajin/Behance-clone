@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<section class="signin-container">
+    <div class="logo-wrapper">
+        
+       <br>
+    </div>
+    <div class="signin-form-wrapper">
+        <div class="signin-form-box">
+            <h5>Sign in to continue</h5>
+            <div class="signin-logo-wrapper">
+                <img src="{% static 'image/signuplogo.png' %}" alt="">
+                <h3>Behance</h3>
+            </div>
+            <!-- Signin Form -->
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-container">
+                    <label for="username">username</label>
+                    <input type="text" name="username" required>
+                    <label for="password">password</label>
+                    <input type="password" name="password" required>
+                    <button type="submit" class="signin-button">Sign in</button>
+                </div>    
+            </form>
+            <!-- Signup Form Ends-->
+            
+            <p>Not a member yet? <span><a href="{% url 'register' %}">Sign up Now</a></span></p>
+            <button class="facebook-login"><a href="#"><i class="fab fa-facebook-square "></i>Continue with Facebook</a></button>
+            <button class="google-login"><a href="#"><i class="fab fa-google"></i>Continue with Google</a></button>
+        </div>
+    </div>
+</section>
+    {% endblock content %}

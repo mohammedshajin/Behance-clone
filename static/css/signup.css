@@ -1,0 +1,401 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+ 
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: pointer;
+}
+
+.signup-container {
+  height: 90vh;
+  margin: 30px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.signup-container .logo-wrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container .logo-wrapper img {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.signup-container .logo-wrapper h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #f9f9f9;
+}
+
+.signup-container .signup-form-wrapper {
+  width: 50%;
+  height: 100%;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box {
+  height: 100%;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-left: 20px;
+  padding: 55px;
+  color: #191919;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box h2 {
+  font-weight: 600;
+  font-size: 30px;
+  color: #323232;
+  padding-bottom: 8px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box h4 {
+  font-weight: 500;
+  font-size: 12px;
+  color: #959595;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box h4 span {
+  color: #0057ff;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box h4 span a {
+  text-decoration: none;
+  color: #0057ff;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box form {
+  margin: 40px 0px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box form .form-container label {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  color: #747474;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box form .form-container input[type=text], .signup-container .signup-form-wrapper .signup-form-box form .form-container input[type=password] {
+  height: 30px;
+  width: 100%;
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #959595;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box form .form-container input[type=text]:focus, .signup-container .signup-form-wrapper .signup-form-box form .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box small {
+  font-weight: 400;
+  font-size: 12px;
+  color: #191919;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box ul {
+  font-weight: 400;
+  font-size: 12px;
+  color: #191919;
+  padding-left: 20px;
+  line-height: 18px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .create-account-button {
+  padding: 6px;
+  width: 120px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #0057ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 5px 270px;
+  cursor: pointer;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .create-account-button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .facebook-login, .signup-container .signup-form-wrapper .signup-form-box .google-login {
+  width: 100%;
+  height: 42px;
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #3f5c94;
+  color: #fff;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 15px 0px 4px;
+  font-size: 16px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .facebook-login a, .signup-container .signup-form-wrapper .signup-form-box .google-login a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .facebook-login .fab, .signup-container .signup-form-wrapper .signup-form-box .google-login .fab {
+  margin-right: 10px;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .google-login {
+  border: 1px solid #696969;
+  background-color: #ffffff;
+}
+
+.signup-container .signup-form-wrapper .signup-form-box .google-login a {
+  color: #6e6e6e;
+}
+
+.signin-container {
+  height: 90vh;
+  margin: 30px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.signin-container .logo-wrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-container .logo-wrapper img {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.signin-container .logo-wrapper h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #f9f9f9;
+}
+
+.signin-container .signin-form-wrapper {
+  width: 50%;
+  height: 100%;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box {
+  height: 100%;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-left: 20px;
+  padding: 100px 55px;
+  color: #191919;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box h5 {
+  font-weight: 600;
+  font-size: 13px;
+  color: #323232;
+  padding-bottom: 12px;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .signin-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .signin-logo-wrapper img {
+  height: 35px;
+  width: 35px;
+  margin-right: 15px;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .signin-logo-wrapper h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #191919;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box form {
+  margin: 40px 0px;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box form .form-container label {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  color: #747474;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box form .form-container input[type=text], .signin-container .signin-form-wrapper .signin-form-box form .form-container input[type=password] {
+  height: 30px;
+  width: 100%;
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  border-bottom: 1px solid #959595;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box form .form-container input[type=text]:focus, .signin-container .signin-form-wrapper .signin-form-box form .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #505050;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box p span {
+  color: #0057ff;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box p span a {
+  text-decoration: none;
+  color: #0057ff;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .signin-button {
+  padding: 6px;
+  width: 120px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #0057ff;
+  color: #fff;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .signin-button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .facebook-login, .signin-container .signin-form-wrapper .signin-form-box .google-login {
+  width: 100%;
+  height: 42px;
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #3f5c94;
+  color: #fff;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 15px 0px 4px;
+  font-size: 16px;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .facebook-login a, .signin-container .signin-form-wrapper .signin-form-box .google-login a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .facebook-login .fab, .signin-container .signin-form-wrapper .signin-form-box .google-login .fab {
+  margin-right: 10px;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .google-login {
+  border: 1px solid #696969;
+  background-color: #ffffff;
+}
+
+.signin-container .signin-form-wrapper .signin-form-box .google-login a {
+  color: #6e6e6e;
+}
+/*# sourceMappingURL=signup.css.map */

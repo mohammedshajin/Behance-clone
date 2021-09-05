@@ -14,7 +14,7 @@ def profile(request, pk):
     return render (request, 'users/other_profile.html', context)
 
 def loginUser(request):
-    page = "login"
+
 
     if request.user.is_authenticated:
         return redirect ('work')
@@ -38,14 +38,13 @@ def loginUser(request):
         else:
             messages.error(request, "username or password incorrect")
 
-    return render(request, 'users/login_register.html')
+    return render(request, 'users/signin.html')
 
 def logoutUser(request):
     logout(request)
     return redirect('login')
 
 def registerUser(request):
-    page = "register"
     form = UserCreationForm()
 
     if request.method == 'POST':
@@ -62,9 +61,9 @@ def registerUser(request):
         else:
             messages.success(request, 'An error occured')
 
-    context = {'page':page, 'form':form}
+    context = {'form':form}
 
-    return render(request, 'users/login_register.html', context)
+    return render(request, 'users/register.html', context)
 
 @login_required(login_url='login')
 def userAccount(request):
