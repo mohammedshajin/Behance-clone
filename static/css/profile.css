@@ -64,6 +64,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 header .left-nav {
@@ -89,6 +90,12 @@ header .left-nav ul {
 header .left-nav ul li {
   display: inline-block;
   padding-right: 15px;
+  cursor: pointer;
+}
+
+header .left-nav ul li a {
+  text-decoration: none;
+  color: #191919;
 }
 
 header .input-container {
@@ -146,7 +153,6 @@ header .right-nav .profile {
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  background-color: turquoise;
   margin-right: 20px;
   overflow: hidden;
 }
@@ -403,6 +409,350 @@ section .profile-card button:hover {
 
 section .profile-card p {
   margin: 20px 0px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #191919;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-container .banner-position {
+  width: 100%;
+  height: 209px;
+  background-color: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-container .banner-position:hover {
+  background-color: #3b4e6e;
+}
+
+.profile-container .banner-position img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-container .menu-wrapper {
+  width: 100%;
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container .menu-wrapper .menu-options {
+  height: 63px;
+  width: 100%;
+  margin: 30px 0px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 460px;
+}
+
+.profile-container .menu-wrapper .menu-options button {
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 14px;
+  color: #191919;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  margin: 0px 4px;
+  background-color: transparent;
+}
+
+.profile-container .menu-wrapper .menu-options button:nth-child(1) {
+  background-color: #191919;
+  color: white;
+}
+
+.profile-container .menu-wrapper .menu-options button:nth-child(2):hover, .profile-container .menu-wrapper .menu-options button:nth-child(3):hover {
+  background-color: #ececec;
+}
+
+.profile-container .menu-wrapper .project-container {
+  height: max-content;
+  margin: 26px;
+  width: auto;
+  padding-bottom: 50px;
+  padding-left: 450px;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects {
+  height: 256px;
+  width: 322px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 7px 10px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+  transition: opacity .2s, visibility .2s;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  padding-bottom: 6px;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .user p {
+  font-size: 13px;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats {
+  display: flex;
+  font-size: 12px;
+  color: #696969;
+  padding-bottom: 6px;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats p {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats p .fas {
+  padding-right: 4px;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects:hover .projects-info {
+  visibility: visible;
+  opacity: 1;
+  box-shadow: inset 10px -40px 50px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-container .profile-card {
+  height: max-content;
+  width: 362px;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 33px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-container .profile-card .profile-pic {
+  height: 110px;
+  width: 110px;
+  position: relative;
+}
+
+.profile-container .profile-card .profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-container .profile-card .profile-pic::after {
+  content: '+';
+  color: #fff;
+  height: 22px;
+  text-align: center;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #0057ff;
+}
+
+.profile-container .profile-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191919;
+  max-width: 300px;
+  margin: 20px 0px;
+}
+
+.profile-container .profile-card h4 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #696969;
+}
+
+.profile-container .profile-card .user-location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #696969;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.profile-container .profile-card .user-location .fas {
+  margin-right: 8px;
+}
+
+.profile-container .profile-card button {
+  width: 296px;
+  height: 40px;
+  text-align: center;
+  background-color: #0057ff;
+  border-radius: 20px;
+  border: 1px solid #0057ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.profile-container .profile-card button .fas {
+  color: #fff;
+  margin-right: 8px;
+}
+
+.profile-container .profile-card button:hover {
+  background-color: #013ecb;
+}
+
+.profile-container .profile-card .message {
+  background-color: #fff;
+  color: #0057ff;
+  border: 1px solid #dfdfdf;
+}
+
+.profile-container .profile-card .message .fas {
+  color: #0057ff;
+}
+
+.profile-container .profile-card .message:hover {
+  background-color: #dee8ff;
+}
+
+.profile-container .profile-card .profile-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile-container .profile-card .profile-stats div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  height: 30px;
+}
+
+.profile-container .profile-card .profile-stats div p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #191919;
+  padding-top: -5px;
+}
+
+.profile-container .profile-card .social-icons {
+  height: max-content;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.profile-container .profile-card .social-icons .fab {
+  margin-right: 8px;
+}
+
+.profile-container .profile-card .social-icons a {
+  text-decoration: none;
+  color: black;
+}
+
+.profile-container .profile-card .social-texts {
+  width: 100%;
+  margin: 8px 0px;
+}
+
+.profile-container .profile-card .social-texts a {
+  text-decoration: none;
+}
+
+.profile-container .profile-card .social-texts p {
+  margin: 7px 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: #696969;
+}
+
+.profile-container .profile-card .profile-contact {
+  width: 100%;
+  margin: 8px 0px;
+  color: #191919;
+}
+
+.profile-container .profile-card .profile-contact p {
+  font-weight: 700;
+  font-size: 11px;
+  margin: 7px 0;
+}
+
+.profile-container .profile-card .profile-contact small {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.profile-container .profile-card p {
+  margin: 30px 0px 2px;
   font-size: 11px;
   font-weight: 400;
   color: #191919;

@@ -3,13 +3,14 @@
 {% block content %}
 
 
-<section>
+<section class="profile-container">
     <div class="banner-position">
         <i class="fas fa-arrow-circle-down fa-3x" ></i>
         <p>Add a Banner Image</p>
         <small>Optimal dimensions 3200 x 410px</small>
     </div>
-    <div class="menu">
+
+    <div class="menu-wrapper">
         <div class="menu-options">
             <button>Work</button>
             <button>Livestreams</button>
@@ -18,17 +19,31 @@
             <button>Insights</button>
             <button>Drafts</button>
         </div>
+         <!-- Project Section Starts Here -->
+        <div class="project-container">
+        <div class="project-wrapper">
         {% for work in works %}
-        <div class="create-project">
-            <div class="add-project">
-                <i class="fas fa-plus-circle fa-lg"></i>
+        <!-- First Project Card -->
+        <div class="projects">
+            <img src="{{work.Cover.url}}" alt="">
+            <div class="projects-info">
+                <h4>{{work.title}}</h4>
+                <div class="user-stats">
+                    <div class="user">
+                        <p>{{work.profile}}</p>
+                    </div>
+                    <div class="photo-stats">
+                        <p><i class="fas fa-thumbs-up"></i>425</p>
+                        <p><i class="fas fa-eye"></i>2.3k</p>
+                    </div>
+                </div>
             </div>
-            <button>Create a Project</button>
-            <p>Get feedback, views, and appreciations. Public projects can be featured by our curators.</p>
         </div>
         {% endfor %}
-
     </div>
+</div>
+</div>
+
     <div class="profile-card">
         <div class="profile-pic">
             <img src="{{profile.dp.url}}" alt="">

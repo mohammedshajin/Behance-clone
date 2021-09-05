@@ -8,7 +8,10 @@ from django.contrib.auth.decorators import login_required
 
 from .forms import ProfileForm
 
-
+def profile(request, pk):
+    profile = Profile.objects.get(id=pk)
+    context = {'profile': profile}
+    return render (request, 'users/other_profile.html', context)
 
 def loginUser(request):
     page = "login"
@@ -55,7 +58,7 @@ def registerUser(request):
 
             login(request, user)
 
-            return redirect('profile')
+            return redirect('edit-account')
         else:
             messages.success(request, 'An error occured')
 

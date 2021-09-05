@@ -15,8 +15,12 @@
            <a href="{% url 'work_single' work.id %}"><img src="{{work.Cover.url}}" alt=""></a> 
             <div class="projects-info">
                 <div class="user">
-                    <img src="image/users/user1.jpg" alt="">
-                    <p>{{work.profile.name}}</p>
+                    <img src="{{work.profile.dp.url}}" alt="">
+                    {% if request.user.profile.id == work.profile.id %}
+                    <a href="{% url 'profile' %}">{{work.profile.name}}</a>
+                    {% else %}
+                    <a href="{% url 'other_profile' work.profile.id %}">{{work.profile.name}}</a>
+                    {% endif %}
                 </div>
                 <div class="photo-stats">
                     <p><i class="fas fa-thumbs-up"></i>425</p>
