@@ -90,4 +90,12 @@ def editAccount(request):
     context = {'form': form}
     return render(request, 'users/profile_form.html', context) 
 
+@login_required(login_url='login')
+def inbox(request):
+    profile = request.user.profile
+    messageReq = profile.messages.all()
+    unreadcount = messageReq.filter(is_read=False).count()
+    context = {'messageReq': messageReq, 'unreadcount': unreadcount}
+    return render(request, 'users/inbox.html', context) 
+
 

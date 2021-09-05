@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <h3>New Messages (<span>{{unreadcount}}</span>) </h3>
+    <ul>
+        {% for message in messageReq %}
+        {% if message.is_read == False %}
+        <li style="font-weight: bold;">
+        {% else %}
+        <li>
+        {% endif %}
+            <a href="">
+                <span>{{message.name}}</span>
+                <span>{{message.body}}</span>
+                <span>{{message.created}}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}

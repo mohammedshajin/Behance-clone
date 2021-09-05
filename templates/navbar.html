@@ -21,7 +21,7 @@
         
         {% if request.user.is_authenticated %}
         <button><a style="text-decoration: none; color: black;" href="{% url 'creatework' %}">Share you work</a></button>
-        <i class="fas fa-envelope"></i>
+        <a href="{% url 'inbox' %}"><i class="fas fa-envelope"></i></a>
         <i class="fas fa-bell"></i>
         <a href="{% url 'profile' %}"><div class="profile">
             <img src="{{user.profile.dp.url}}" alt="">
