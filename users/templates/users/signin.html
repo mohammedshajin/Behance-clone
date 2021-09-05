@@ -1,26 +1,36 @@
-{% extends 'main.html' %}
 {% load static %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin - Behance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    
 <section class="signin-container">
     <div class="logo-wrapper">
-        
-       <br>
+        <a href="{% url 'work' %}"><img src="{% static 'image/signuplogo.png' %}" alt=""></a>
+            <h3>Behance</h3>
+       
     </div>
     <div class="signin-form-wrapper">
         <div class="signin-form-box">
             <h5>Sign in to continue</h5>
             <div class="signin-logo-wrapper">
-                <img src="{% static 'image/signuplogo.png' %}" alt="">
+                <a href="{% url 'work' %}"><img src="{% static 'image/signuplogo.png' %}" alt=""></a>
                 <h3>Behance</h3>
             </div>
             <!-- Signin Form -->
             <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-container">
-                    <label for="username">username</label>
+                    <label for="username">Username</label>
                     <input type="text" name="username" required>
-                    <label for="password">password</label>
+                    <label for="password">Password</label>
                     <input type="password" name="password" required>
                     <button type="submit" class="signin-button">Sign in</button>
                 </div>    
@@ -33,4 +43,5 @@
         </div>
     </div>
 </section>
-    {% endblock content %}
+</body>
+</html>

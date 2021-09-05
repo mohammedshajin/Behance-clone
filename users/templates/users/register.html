@@ -1,12 +1,22 @@
-{% extends 'main.html' %}
+
 {% load static %}
 
-{% block content %}
-
-<section class="signup-container">
-    <div class="logo-wrapper">
-        <br>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Behance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <section class="signup-container">
+        <div class="logo-wrapper">
+            <a href="{% url 'work' %}"><img src="{% static 'image/signuplogo.png' %}" alt=""></a>
+            <h3>Behance</h3>
+        </div>
     <div class="signup-form-wrapper">
         <div class="signup-form-box">
             <h2>Create an account</h2>
@@ -27,12 +37,12 @@
                 </div>    
             </form>
             <!-- Signup Form Ends-->
-  
+            <!-- Signup Form Ends-->
+            
             <button class="facebook-login"><a href="#"><i class="fab fa-facebook-square "></i>Continue with Facebook</a></button>
             <button class="google-login"><a href="#"><i class="fab fa-google"></i>Continue with Google</a></button>
         </div>
     </div>
 </section>
-
-
-{% endblock content %}
+</body>
+</html>

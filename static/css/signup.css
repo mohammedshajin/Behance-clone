@@ -53,7 +53,7 @@ h6 {
 }
 
 body {
- 
+  background: url(../image/signup-background.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   cursor: pointer;
