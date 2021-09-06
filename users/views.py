@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
-from .forms import ProfileForm
+from .forms import ProfileForm, MessageForm
 
 def profile(request, pk):
     profile = Profile.objects.get(id=pk)
@@ -97,5 +97,41 @@ def inbox(request):
     unreadcount = messageReq.filter(is_read=False).count()
     context = {'messageReq': messageReq, 'unreadcount': unreadcount}
     return render(request, 'users/inbox.html', context) 
+
+@login_required(login_url='login')
+def viewmessage(request, pk):
+    profile =  request.user.profile
+    message = profile.messages.get(id=pk)
+    if message.is_read == False:
+        message.is_read = True
+        message.save
+    context = {'message':message}
+    return render(request, 'users/message.html', context) 
+
+@login_required(login_url='login')
+def createmessage(request, pk):
+    recipient = Profile.objects.get(id=pk)
+    form = MessageForm()
+    try:
+        sender = request.user.profile
+    except:
+        sender = None
+    
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit = False)
+            message.sender = sender
+            message.recipient = recipient
+
+            if sender:
+                message.name =sender.name
+                
+            message.save()
+            return redirect('other_profile', pk=recipient.id)
+
+
+    context = {'recipient':recipient, 'form':form}
+    return render(request, 'users/message-form.html', context) 
 
 

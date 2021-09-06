@@ -1,0 +1,10 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {% if request.user.is_authenticated == False %}
+    {{form.name.label}}
+    {{form.name}}
+    {% endif %}
+    {{form.body.label}}
+    {{form.body}}
+    <input type="submit">
+</form>

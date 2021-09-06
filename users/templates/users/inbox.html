@@ -11,7 +11,7 @@
         {% else %}
         <li>
         {% endif %}
-            <a href="">
+            <a style="color: black;" href="{% url 'message' message.id %}">
                 <span>{{message.name}}</span>
                 <span>{{message.body}}</span>
                 <span>{{message.created}}</span>

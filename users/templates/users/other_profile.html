@@ -61,7 +61,7 @@
                 <p><i class="fas fa-map-marker-alt"></i>{{profile.location}}</p>
             </div>
             <button><i class="fas fa-plus-circle"></i>Follow</button>
-            <button class="message"><i class="fas fa-envelope"></i>Message</button>
+            <button class="message"><a href="{% url 'create-message' profile.id %}"><i class="fas fa-envelope"></i>Message</a></button>
             <div class="profile-stats">
                 <div>
                     <p>Project Views</p>
