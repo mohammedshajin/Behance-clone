@@ -35,3 +35,10 @@ class Message(models.Model):
     class Meta:
         ordering = ['is_read', '-created']
 
+class Follow(models.Model):
+    following = models.ForeignKey(Profile, on_delete=SET_NULL, null=True, blank=True, related_name="following")
+    follower = models.ForeignKey(Profile, on_delete=SET_NULL, null=True, blank=True, related_name="follower")
+    created = models.DateTimeField(auto_now_add=True)
+
+   
+

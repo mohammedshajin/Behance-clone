@@ -11,4 +11,6 @@ urlpatterns = [
     path('inbox/', views.inbox, name='inbox'),
     path('message/<str:pk>/', views.viewmessage, name='message'),
     path('send-message/<str:pk>/', views.createmessage, name='create-message'),
+    path('follow/<str:pk>/', views.follow, name='follow'),
+    path('unfollow/<str:pk>/', views.unfollow, name='unfollow'),
     ]
