@@ -7,6 +7,10 @@ class ProfileForm(ModelForm):
         model = Profile
         fields = ['name', 'email', 'username', 'bio', 'dp', 'facebook', 'twitter', 'dribbble', 'website']
 
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        self.fields['email'].required = True
+
 class MessageForm(ModelForm):
     class Meta:
         model = Message

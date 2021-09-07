@@ -8,7 +8,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     email = models.EmailField(max_length=200, blank=True, null=True)
     bio= models.TextField(blank=True, null=True)
-    dp = models.ImageField(blank=True, null=True, upload_to= 'profiles/', default="profiles/download.jpeg")
+    dp = models.ImageField(blank=True, null=True, upload_to= 'profiles/', default="profiles/download_1.jpeg")
     location = models.CharField(max_length=200, blank=True, null=True)
     username = models.CharField(max_length=200, blank=True, null=True)
     facebook = models.CharField(max_length=200, blank=True, null=True)
