@@ -20,6 +20,8 @@
 <a href="{% url 'appreciate' work.id %}">appreciate</a>
 {% endif %}
 
+
+
 {% for comment in work.comment_set.all %}
 {% if comment.text %}
 <h2>Comments</h2>

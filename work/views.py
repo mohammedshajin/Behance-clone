@@ -10,9 +10,6 @@ from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 
 def work(request):
     works = Work.objects.all()
-
-    
-    
     page = request.GET.get('page')
     results = 6
     paginator =Paginator(works, results)

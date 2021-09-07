@@ -13,13 +13,13 @@ from .forms import ProfileForm, MessageForm
 def profile(request, pk):
     profile = Profile.objects.get(id=pk)
     myprofile = request.user.profile
-    # follow = profile.follower.all()
-    # if myprofile in profile.follower.all():
-    #     follow = True
-    # else:
-    #     follow = False
-
-    context = {'profile': profile}
+    
+    follow = Follow.objects.filter(following=myprofile, follower=profile)
+    if follow:
+        followed = True
+    else:
+        followed = False
+    context = {'profile': profile, 'followed': followed}
     return render (request, 'users/other_profile.html', context)
 
 def loginUser(request):
