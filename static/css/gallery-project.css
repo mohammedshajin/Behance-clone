@@ -1,0 +1,539 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 53px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 23px;
+  border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(70, 42, 42, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+header .left-nav {
+  display: flex;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+header .left-nav img {
+  margin-right: 18px;
+  height: 15px;
+}
+
+header .left-nav ul {
+  list-style: none;
+}
+
+header .left-nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+header .left-nav ul li a {
+  text-decoration: none;
+  color: #191919;
+}
+
+header .input-container {
+  position: relative;
+}
+
+header .input-container input {
+  width: 400px;
+  height: 33px;
+  border-radius: 20px;
+  border: 2px solid #dfdfdf;
+  padding: 10px 0px 10px 30px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header .input-container img {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+header .right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .right-nav button {
+  width: 144px;
+  height: 33px;
+  border-radius: 20px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  border: 1px solid #dfdfdf;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+header .right-nav a {
+  color: #000;
+}
+
+header .right-nav a i {
+  color: #000;
+}
+
+header .right-nav i {
+  margin-right: 15px;
+}
+
+header .right-nav .profile {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+header .right-nav .profile img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.project-details-wrapper {
+  height: 83px;
+  width: auto;
+  margin: 0px 145px;
+  display: flex;
+  align-items: center;
+}
+
+.project-details-wrapper img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.project-details-wrapper div {
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details-wrapper div p {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.project-details-wrapper div h5 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #191919;
+  cursor: pointer;
+}
+
+.project-details-wrapper div h5 a {
+  text-decoration: none;
+  color: #191919;
+}
+
+.project-details-wrapper div h5:hover {
+  text-decoration: underline;
+}
+
+.project-details-wrapper ul {
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 30px;
+  color: #696969;
+  cursor: pointer;
+}
+
+.project-details-wrapper ul li:hover {
+  text-decoration: underline;
+}
+
+section {
+  height: max-content;
+  width: auto;
+  margin: 0px 145px 80px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+section .project-showcase-wrapper {
+  width: 100%;
+  height: max-content;
+}
+
+section .project-showcase-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  margin: -3px 0px;
+}
+
+section .project-adds-options {
+  margin: 92px 101px;
+  width: auto;
+  height: 140vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  gap: 0px 10px;
+}
+
+section .project-adds-options .add-comments {
+  grid-row: 1 / 4;
+  grid-column: 1 /4;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .project-adds-options .add-comments .userdp-commentbox {
+  width: auto;
+  height: 60%;
+  display: flex;
+}
+
+section .project-adds-options .add-comments .userdp-commentbox img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+section .project-adds-options .add-comments .userdp-commentbox textarea {
+  height: 54px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+}
+
+section .project-adds-options .add-comments button {
+  margin-top: 20px;
+  margin-left: 70%;
+  height: 33px;
+  width: 131px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: #191919;
+}
+
+section .project-adds-options .add-comments button:hover {
+  background-color: #959595;
+}
+
+section .project-adds-options .user-details {
+  grid-row: 1 / 4;
+  grid-column: 4 /6;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .project-adds-options .user-details small {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #696969;
+}
+
+section .project-adds-options .user-details .user {
+  display: flex;
+  padding: 10px 0px;
+}
+
+section .project-adds-options .user-details .user img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+section .project-adds-options .user-details .user div {
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .project-adds-options .user-details .user div p {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+section .project-adds-options .user-details .user div p a {
+  text-decoration: none;
+  color: #191919;
+}
+
+section .project-adds-options .user-details .user div p:hover {
+  text-decoration: underline;
+}
+
+section .project-adds-options .user-details .user div h5 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #696969;
+  cursor: pointer;
+}
+
+section .project-adds-options .user-details .user div h5:hover {
+  text-decoration: underline;
+}
+
+section .project-adds-options .user-details .user div h5 i {
+  margin-right: 8px;
+  color: #696969;
+}
+
+section .project-adds-options .user-details button {
+  background-color: #0057ff;
+  padding: 10px;
+  border-radius: 20px;
+  color: #f9f9f9;
+  border: 1px solid transparent;
+  margin: 5px 0;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+section .project-adds-options .user-details button.hire-button {
+  background-color: #f9f9f9;
+  color: #0057ff;
+  border: 1px solid #dee8ff;
+  cursor: pointer;
+}
+
+section .project-adds-options .comments-shows {
+  grid-row: 4 / 14;
+  grid-column: 1 /4;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .project-adds-options .comments-shows .user {
+  display: flex;
+  padding: 20px 0px;
+}
+
+section .project-adds-options .comments-shows .user img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+section .project-adds-options .comments-shows .user div {
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .project-adds-options .comments-shows .user div h5 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+section .project-adds-options .comments-shows .user div h5 a {
+  text-decoration: none;
+  color: #191919;
+}
+
+section .project-adds-options .comments-shows .user div h5:hover {
+  text-decoration: underline;
+}
+
+section .project-adds-options .comments-shows .user div p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #696969;
+  cursor: pointer;
+}
+
+section .project-adds-options .project-tags-list {
+  grid-column: 4 /6;
+  grid-row: 6 / 10;
+  height: max-content;
+  border: 1px solid #e6e6e6;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+section .project-adds-options .project-tags-list button {
+  padding: 10px;
+  height: 36px;
+  border-radius: 20px;
+  margin: 10px 10px 10px 0px;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 600;
+  color: #191919;
+}
+
+section .project-adds-options .project-tags-list button:hover {
+  background-color: #c4bdbd;
+}
+
+.side-box {
+  height: 362px;
+  width: 105px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 133px;
+  right: 40px;
+}
+
+.side-box div {
+  height: 90px;
+  width: 100%;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.side-box div small {
+  font-weight: 700;
+  font-size: 11px;
+  color: #959595;
+}
+
+.side-box-user-follow img {
+  height: 49px;
+  width: 49px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.side-box-hire-us div {
+  border-radius: 50%;
+  height: 49px;
+  width: 49px;
+  border: 1px solid #e6e6e6;
+}
+
+.side-box-save div {
+  border-radius: 50%;
+  height: 49px;
+  width: 49px;
+  border: 1px solid #e6e6e6;
+}
+
+.side-box-appreciate div {
+  border-radius: 50%;
+  height: 49px;
+  width: 49px;
+  border: 1px solid #0057ff;
+  background-color: #0057ff;
+}
+
+.side-box-appreciate div .fas {
+  color: #fff;
+}
+/*# sourceMappingURL=gallery-project.css.map */

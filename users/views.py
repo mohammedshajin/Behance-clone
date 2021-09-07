@@ -10,13 +10,20 @@ from .models import Follow
 
 from .forms import ProfileForm, MessageForm
 
+@login_required(login_url='login')
 def profile(request, pk):
     profile = Profile.objects.get(id=pk)
-    context = {'profile': profile}
+    myprofile = request.user.profile
+    
+    follow = Follow.objects.filter(following=myprofile, follower=profile)
+    if follow:
+        followed = True
+    else:
+        followed = False
+    context = {'profile': profile, 'followed': followed}
     return render (request, 'users/other_profile.html', context)
 
 def loginUser(request):
-
 
     if request.user.is_authenticated:
         return redirect ('work')
@@ -141,6 +148,8 @@ def follow(request, pk):
     profile = request.user.profile
     follower = Profile.objects.get(id=pk)
     follow = Follow.objects.create(following=profile, follower=follower)
+
+
     return redirect('other_profile', pk=follower.id)
 
 @login_required(login_url='login')

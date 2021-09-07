@@ -1,0 +1,378 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  color: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 53px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 23px;
+  border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(70, 42, 42, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+header .left-nav {
+  display: flex;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+header .left-nav img {
+  margin-right: 18px;
+  height: 15px;
+}
+
+header .left-nav ul {
+  list-style: none;
+}
+
+header .left-nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+header .left-nav ul li a {
+  text-decoration: none;
+  color: #191919;
+}
+
+header .input-container {
+  position: relative;
+}
+
+header .input-container input {
+  width: 400px;
+  height: 33px;
+  border-radius: 20px;
+  border: 2px solid #dfdfdf;
+  padding: 10px 0px 10px 30px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header .input-container img {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+header .right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .right-nav button {
+  width: 144px;
+  height: 33px;
+  border-radius: 20px;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+  border: 1px solid #dfdfdf;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+header .right-nav a {
+  color: #000;
+}
+
+header .right-nav a i {
+  color: #000;
+}
+
+header .right-nav i {
+  margin-right: 15px;
+}
+
+header .right-nav .profile {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+header .right-nav .profile img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  background-color: #f9f9f9;
+  height: 93vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-style: normal;
+}
+
+section .messaging-box {
+  width: 900px;
+  height: 570px;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 28px auto 0px;
+  border: 2px solid #e6e6e6;
+  border-radius: 6px;
+  display: flex;
+}
+
+section .messaging-box-left {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+section .messaging-box-left-headerbar {
+  height: 81px;
+  width: 100%;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .messaging-box-left-headerbar p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #191919;
+}
+
+section .messaging-box-left-headerbar p .fas {
+  margin-right: 7px;
+  color: #0057ff;
+}
+
+section .messaging-box-left-headerbar button {
+  height: 32px;
+  width: 111px;
+  background-color: #0057ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+section .messaging-box-left-headerbar button .fas {
+  color: #fff;
+  margin-right: 7px;
+}
+
+section .messaging-box-left-headerbar button:hover {
+  background-color: #013ecb;
+}
+
+section .messaging-box-left-userlist {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+section .messaging-box-left-userlist .user {
+  height: 81px;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px;
+  cursor: pointer;
+}
+
+section .messaging-box-left-userlist .user-details {
+  display: flex;
+  align-items: center;
+}
+
+section .messaging-box-left-userlist .user-details img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+section .messaging-box-left-userlist .user-details p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #191919;
+}
+
+section .messaging-box-left-userlist .user span {
+  font-size: 12px;
+  padding-right: 10px;
+  font-weight: 400;
+}
+
+section .messaging-box-left-userlist .user span a {
+  color: #696969;
+}
+
+.messaging-box {
+  width: 900px;
+  height: 570px;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 28px auto 0px;
+  border: 2px solid #e6e6e6;
+  border-radius: 6px;
+  display: flex;
+}
+
+.messaging-box-right {
+  height: 100%;
+  width: 100%;
+}
+
+.messaging-box-right-headerbar {
+  height: 81px;
+  width: 100%;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.messaging-box-right-headerbar a .fas {
+  color: #696969;
+  margin-right: 50px;
+}
+
+.messaging-box-right-headerbar img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.messaging-box-right-headerbar p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #191919;
+}
+
+.messaging-box-right-headerbar p span {
+  color: #0057ff;
+}
+
+.messaging-box-right-headerbar p span a {
+  text-decoration: none;
+  color: #0057ff;
+}
+
+.messaging-box-right-headerbar p span:hover {
+  text-decoration: underline #0057ff;
+}
+
+.messaging-box-right-chats {
+  height: 400px;
+  width: 692px;
+  overflow: auto;
+  padding: 40px;
+}
+
+.messaging-box-right-type-message {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #e6e6e6;
+}
+
+.messaging-box-right-type-message input {
+  height: 40px;
+  width: 700px;
+  padding: 10px;
+  border: 2px solid #e6e6e6;
+}
+
+.messaging-box-right-type-message input:focus {
+  outline: none !important;
+  border-color: #0057ff;
+}
+/*# sourceMappingURL=inbox.css.map */

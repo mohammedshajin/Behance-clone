@@ -8,7 +8,7 @@ from .models import Work,Comment
 class Workform(ModelForm):
     class Meta:
         model = Work
-        fields = ['title', 'tags', 'tools_used', 'Cover']
+        fields = ['title', 'tags', 'tools_used', 'Cover', 'imageone', 'imagetwo']
         
         widgets = {
             'tags' : forms.CheckboxSelectMultiple(),
