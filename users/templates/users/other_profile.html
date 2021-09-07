@@ -61,18 +61,13 @@
             <div class="user-location">
                 <p><i class="fas fa-map-marker-alt"></i>{{profile.location}}</p>
             </div>
-<<<<<<< HEAD
-            {% if self.request.user in profile.followers %}
-            <button><a href="{% url 'unfollow' profile.id %}"><i class="fas fa-plus-circle"></i>Unfollow</a></button>
-            {% else %}
-            <button><a href="{% url 'follow' profile.id %}"><i class="fas fa-plus-circle"></i>Follow</a></button>
-=======
+
             
             {% if followed %}
             <button><a href="{% url 'unfollow' profile.id %}"><i class="fas fa-plus-circle"></i>Unfollow</a></button>
             {% else %}
             <button><a href="{% url 'follow' profile.id %}"><i class="fas fa-plus-circle"></i>follow</a></button>
->>>>>>> feature
+
             {% endif %}
             <button class="message"><a href="{% url 'create-message' profile.id %}"><i class="fas fa-envelope"></i>Message</a></button>
             <div class="profile-stats">
