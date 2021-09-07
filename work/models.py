@@ -34,4 +34,5 @@ class Comment(models.Model):
     coment_date=models.DateTimeField(auto_now_add=True)
 
 class Appreciate(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     work = models.ForeignKey(Work, on_delete=models.CASCADE)

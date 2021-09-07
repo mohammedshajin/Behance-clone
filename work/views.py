@@ -1,6 +1,6 @@
 from django.forms.forms import Form
 from django.shortcuts import redirect, render
-from .models import Work
+from .models import Work, Appreciate
 from .forms import Workform, Commentform
 from django.contrib.auth.decorators import login_required
 from users.models import Profile
@@ -10,6 +10,8 @@ from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 
 def work(request):
     works = Work.objects.all()
+
+    
     
     page = request.GET.get('page')
     results = 6
@@ -28,6 +30,7 @@ def work(request):
 
 def work_single(request, pk):
     work = Work.objects.get(id=pk)
+    profile = request.user.profile
     form =Commentform()
 
     if request.method == 'POST':
@@ -38,7 +41,14 @@ def work_single(request, pk):
         comment.save()
         return redirect('work_single', pk=work.id)
 
-    context = {'work':work, 'form':form}
+    
+    appreciate = Appreciate.objects.filter(profile=profile, work=work)
+    if appreciate:
+        like = True
+    else:
+        like = False
+
+    context = {'work':work, 'form':form,'like': like}
     return render(request, 'work/work_single.html', context)
 
 @login_required(login_url="login")
@@ -66,4 +76,17 @@ def search(request):
     context = {'works': works, 'search_query': search_query}
 
     return render(request, 'work/search.html', context)
+
+def appreciate(request, pk):
+    profile = request.user.profile
+    work = Work.objects.get(id=pk)
+    liked = False
+    appreciate = Appreciate.objects.filter(profile=profile, work=work)
+    if appreciate:
+        appreciate.delete()
+    else:
+        liked = True
+        Appreciate.objects.create(profile=profile, work=work)
+    
+    return redirect('work_single', pk=work.id)
     

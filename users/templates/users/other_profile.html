@@ -57,14 +57,16 @@
             </div>
             <h2>{{profile.name}}</h2>
             <h4>{{profile.bio}}</h4>
+
             <div class="user-location">
                 <p><i class="fas fa-map-marker-alt"></i>{{profile.location}}</p>
             </div>
             
+            
             <button><a href="{% url 'follow' profile.id %}"><i class="fas fa-plus-circle"></i>Follow</a></button>
             
             <button><a href="{% url 'unfollow' profile.id %}"><i class="fas fa-plus-circle"></i>Unfollow</a></button>
-            
+            {{follow}}
             <button class="message"><a href="{% url 'create-message' profile.id %}"><i class="fas fa-envelope"></i>Message</a></button>
             <div class="profile-stats">
                 <div>
@@ -77,7 +79,9 @@
                 </div>
                 <div>
                     <p>Followers</p>
+                    
                     <p>{{profile.follower.count}}</p>
+                    
                 </div>
                 <div>
                     <p>Following</p>

@@ -12,6 +12,13 @@ from .forms import ProfileForm, MessageForm
 
 def profile(request, pk):
     profile = Profile.objects.get(id=pk)
+    myprofile = request.user.profile
+    # follow = profile.follower.all()
+    # if myprofile in profile.follower.all():
+    #     follow = True
+    # else:
+    #     follow = False
+
     context = {'profile': profile}
     return render (request, 'users/other_profile.html', context)
 
@@ -141,6 +148,8 @@ def follow(request, pk):
     profile = request.user.profile
     follower = Profile.objects.get(id=pk)
     follow = Follow.objects.create(following=profile, follower=follower)
+
+
     return redirect('other_profile', pk=follower.id)
 
 @login_required(login_url='login')

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.deletion import SET_NULL
+from django.db.models.deletion import CASCADE, SET_NULL
 
 
 class Profile(models.Model):
@@ -36,9 +36,15 @@ class Message(models.Model):
         ordering = ['is_read', '-created']
 
 class Follow(models.Model):
-    following = models.ForeignKey(Profile, on_delete=SET_NULL, null=True, blank=True, related_name="following")
-    follower = models.ForeignKey(Profile, on_delete=SET_NULL, null=True, blank=True, related_name="follower")
+    following = models.ForeignKey(Profile, on_delete=CASCADE, null=True, blank=True, related_name="following")
+    follower = models.ForeignKey(Profile, on_delete=CASCADE, null=True, blank=True, related_name="follower")
     created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.following)
+
+    class Meta:
+        unique_together = ("following", "follower")
 
    
 
