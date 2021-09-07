@@ -25,9 +25,12 @@ def work(request):
     context = {'works':works, 'paginator':paginator}
     return render(request, 'work/work.html', context)
 
+@login_required(login_url="login")
 def work_single(request, pk):
     work = Work.objects.get(id=pk)
+    
     profile = request.user.profile
+        
     form =Commentform()
 
     if request.method == 'POST':
@@ -74,6 +77,7 @@ def search(request):
 
     return render(request, 'work/search.html', context)
 
+@login_required(login_url="login")
 def appreciate(request, pk):
     profile = request.user.profile
     work = Work.objects.get(id=pk)

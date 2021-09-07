@@ -10,6 +10,7 @@ from .models import Follow
 
 from .forms import ProfileForm, MessageForm
 
+@login_required(login_url='login')
 def profile(request, pk):
     profile = Profile.objects.get(id=pk)
     myprofile = request.user.profile
@@ -23,7 +24,6 @@ def profile(request, pk):
     return render (request, 'users/other_profile.html', context)
 
 def loginUser(request):
-
 
     if request.user.is_authenticated:
         return redirect ('work')
