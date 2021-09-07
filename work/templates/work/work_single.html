@@ -20,6 +20,8 @@
 <a href="{% url 'appreciate' work.id %}">appreciate</a>
 {% endif %}
 
+<p>{{work.appreciate_set.count}}</p>
+
 
 
 {% for comment in work.comment_set.all %}
