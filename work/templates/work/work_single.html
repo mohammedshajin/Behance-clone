@@ -1,39 +1,153 @@
-{% extends 'main.html' %}
-
-{% block content %}
-
-
-
-<img src="{{work.Cover.url}}" alt="cover">
-<p>{{work.title}}</p>
-<p>{{work.profile.name}}</p>
-
-<form action="{% url 'work_single' work.id %}" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" >
-</form>
-
-{% if like %}
-<a href="{% url 'appreciate' work.id %}">unappreciate</a>
-{% else %}
-<a href="{% url 'appreciate' work.id %}">appreciate</a>
-{% endif %}
-
-<p>{{work.appreciate_set.count}}</p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/gallery-project.css' %}">
+    <title>Project Name | Behance</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
 
 
+<!-- First Section Project Name User Details Starts Here-->
+<div class="project-details-wrapper">
+    <img src="{{work.profile.dp.url}}" alt="">
+    <div>
+        <p>{{work.title}}</p>
+        {% if request.user.profile.id == work.profile.id %}
+        <h5><a href="{% url 'profile' %}">{{work.profile.name}}</a></h5>
+        {% else %}
+        <h5><a href="{% url 'other_profile' work.profile.id %}">{{work.profile.name}}</a></h5>
+        {% endif %}
+    </div>
+    <ul>
+        <li>Follow</li>
+    </ul>
+</div>
+<!-- First Section Project Name User Details Ends Here-->
 
-{% for comment in work.comment_set.all %}
-{% if comment.text %}
-<h2>Comments</h2>
-<br>
 
-<p>{{comment.text}}</p>
-<p>{{comment.profile.name}}</p>
-<p>{{comment.coment_date}}</p>
-{% endif %}
-<br>
-{% endfor %}
+<section>
+    <!-- Project Images -->
+    <div class="project-showcase-wrapper">
+        <img src="{{work.Cover.url}}" alt="">
+        {% if work.imageone %}
+        <img src="{{work.imageone.url}}" alt="">
+        {% endif %}
+        {% if work.imagetwo %}
+        <img src="{{work.imagetwo.url}}" alt="">
+        {% endif %}
+        <!-- Add more showcase images -->
+        <!-- <img src="/images/projects/" alt="">
+        <img src="/images/projects/" alt="">
+        <img src="/images/projects/" alt=""> -->
+    </div>
 
-{% endblock content %}
+    <!-- Project Comments, Follow, Tags Start Here-->
+    <div class="project-adds-options">
+        <div class="add-comments">
+            <div class="userdp-commentbox">
+                <img src="{{user.profile.dp.url}}" alt="">
+                <form action="{% url 'work_single' work.id %}" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                
+                <button type="submit">Post a Comment</button>
+            </form>
+            </div>
+            
+        </div>
+
+        <div class="user-details">
+            <small>{{work.profile}}</small>
+            <div class="user">
+                <img src="{{work.profile.dp.url}}" alt="">
+                <div>
+                    <p><a href="/user/jordan-dice.html">{{work.profile.name}}</a></p>
+                    <h5><i class="fas fa-map-marker-alt"></i>{{work.profile.location}}</h5>
+                </div>
+            </div>
+        <p>{{work.title}}</p>
+        {% if request.user.profile.id == work.profile.id %}
+        <button><a href="{% url 'profile' %}">Follow</a></button>
+        {% else %}
+        <button><a href="{% url 'other_profile' work.profile.id %}">Follow
+        {% endif %}
+        <button class="hire-button">Hire Us</button>
+        </div>
+
+        <div class="comments-shows">
+            {% for comment in work.comment_set.all %}
+            {% if comment.text %}
+
+            <div class="user">
+                <img src="{{comment.profile.dp.url}}" alt="">
+                <div>
+                    <h5><a href="#">{{comment.profile.name}}</a></h5>
+                    <p>{{comment.text}}</p>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            
+        </div>
+
+
+        <div class="project-tags-list">
+            <button>design</button>
+            <button>website</button>
+            <button>Web</button>
+            <button>UI UX</button>
+            <button>branding</button>
+            <button>logo</button>
+            <button>typography</button>
+            <!-- Add more buttons -->
+            <button>typography</button>
+            <button>typography</button>
+            <button>typography</button>
+            <button>typography</button>
+        </div>
+
+    </div>
+    <!--  Project Comments, Follow, Tags Ends Here -->
+</section>
+
+<aside class="side-box">
+    <div class="side-box-user-follow">
+        <img src="{{work.profile.dp.url}}" alt="">
+        <small>Follow</small>
+    </div>
+    <div class="side-box-hire-us">
+        <div>
+            <i class="fas fa-envelope"></i>
+        </div>
+        <small>Hire Us</small>
+    </div>
+    <!-- <div class="side-box-tools"></div> -->
+    <div class="side-box-save">
+        <div>
+            <i class="fas fa-folder-open"></i>
+        </div>
+        <small>Save</small>
+    </div>
+    <div class="side-box-appreciate">
+        <div>
+            <i class="fas fa-thumbs-up"></i>
+        </div>
+        {% if like %}
+        <a href="{% url 'appreciate' work.id %}"><small>UnAppreciate</small></a>
+        {% else %}
+        <a href="{% url 'appreciate' work.id %}"><small>Appreciate</small></a>
+        {% endif %}
+        
+    </div>
+</aside>
+
+
+</body>
+</html>

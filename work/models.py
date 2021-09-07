@@ -9,6 +9,8 @@ class Work(models.Model):
     tags = models.ManyToManyField('Tag', blank=True)
     tools_used = models.ManyToManyField('Tools', blank=True)
     Cover = models.ImageField(upload_to='media')
+    imageone = models.ImageField(upload_to='media', null=True, blank=True)
+    imagetwo = models.ImageField(upload_to='media', null=True, blank=True)
 
 
     def __str__(self):

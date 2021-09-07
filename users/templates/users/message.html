@@ -2,8 +2,32 @@
 
 {% block content %}
 
-<h1>{{message.name}}</h1>
-<p>{{message.body}}</p>
-<small>{{message.created}}</small>
+<section>
+    <div class="messaging-box">
+        
+        <!-- Right SIde Messaging Box -->
+        <div class="messaging-box-right">
+            <div class="messaging-box-right-headerbar">
+                <a href="{% url 'inbox' %}"><i class="fas fa-arrow-left fa-lg"></i></a>
+                <img src="{{message.sender.dp.url}}" alt="">
+                <p>Message with <span><a href="#">{{message.sender}}</a></span></p>
+            </div>
+            <div class="messaging-box-right-chats">
+                <p>{{message.body}}</p>
+                <small>{{message.created}}</small>
+            </div>
+            
+        </div>
+
+
+
+
+
+    </div>
+</section>
+
 
 {% endblock content %}
+
+
+

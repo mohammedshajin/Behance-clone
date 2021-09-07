@@ -2,23 +2,125 @@
 
 {% block content %}
 
-<div>
-    <h3>New Messages (<span>{{unreadcount}}</span>) </h3>
+<section>
+    <div class="messaging-box">
+        
+        <!-- Left SIde Messaging Box -->
+        <div class="messaging-box-left">
+
+            <div class="messaging-box-left-headerbar">
+                <p><i class="fas fa-inbox fa-sm"></i>Inbox</p>
+                <button><i class="fas fa-plus fa-sm"></i>Compose</button>
+            </div>
+            <div class="messaging-box-left-userlist">
     <ul>
         {% for message in messageReq %}
-        {% if message.is_read == False %}
-        <li style="font-weight: bold;">
-        {% else %}
-        <li>
-        {% endif %}
-            <a style="color: black;" href="{% url 'message' message.id %}">
-                <span>{{message.name}}</span>
-                <span>{{message.body}}</span>
-                <span>{{message.created}}</span>
-            </a>
-        </li>
+        <div class="user">
+            <div class="user-details">
+                <img src="{{message.sender.dp.url}}" alt="">
+                <p>{{message.sender}}</p>
+            </div>
+            <span><a href="{% url 'message' message.id %}">View Message</a></span>
+        </div>
         {% endfor %}
     </ul>
 </div>
+</div>
+
+
+</div>
+</section>
 
 {% endblock content %}
+
+
+
+<section>
+    <div class="messaging-box">
+        
+        <!-- Left SIde Messaging Box -->
+        <div class="messaging-box-left">
+
+            <div class="messaging-box-left-headerbar">
+                <p><i class="fas fa-inbox fa-sm"></i>Inbox</p>
+                <button><i class="fas fa-plus fa-sm"></i>Compose</button>
+            </div>
+
+            <div class="messaging-box-left-userlist">
+                
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/jordan-dice-dp.jpg" alt="">
+                        <p>Jordan Dice</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+                <!-- User 2 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+                
+                <!-- User 3 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+                <!-- User 4 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+                <!-- User 5 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+                <!-- User 6 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+                <!-- User 7 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+                <!-- User 8 -->
+                <div class="user">
+                    <div class="user-details">
+                        <img src="/images/users/" alt="">
+                        <p>Username</p>
+                    </div>
+                    <span><a href="">View Message</a></span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
