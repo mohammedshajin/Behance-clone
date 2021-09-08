@@ -15,12 +15,12 @@
             <img src="{{work.Cover.url}}" alt="">
             <div class="projects-info">
                 <div class="user">
-                    <img src="image/users/user1.jpg" alt="">
+                    <img src="{{work.profile.dp.url}}" alt="">
                     <p>{{work.profile.name}}</p>
                 </div>
                 <div class="photo-stats">
-                    <p><i class="fas fa-thumbs-up"></i>425</p>
-                    <p><i class="fas fa-eye"></i>2.3k</p>
+                    <p><i class="fas fa-thumbs-up"></i>{{work.appreciate_set.all.count}}</p>
+                    
                 </div>
             </div>
         </div>
