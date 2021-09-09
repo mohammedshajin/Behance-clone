@@ -80,7 +80,8 @@ header .left-nav {
 
 header .left-nav img {
   margin-right: 18px;
-  height: 15px;
+  width: 100px;
+  height: auto;
 }
 
 header .left-nav ul {
@@ -243,3 +244,28 @@ header .right-nav .profile img {
   padding-right: 4px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.pagination {
+  display: inline-block;
+  
+  padding: 20px;
+}
+
+.pagination a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color .3s;
+  
+}
+
+.pagination a.active {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
