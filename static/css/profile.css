@@ -547,7 +547,10 @@ section .profile-card p {
 
 .profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .user p {
   font-size: 13px;
+  margin-right: 10px;
 }
+
+
 
 .profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats {
   display: flex;
@@ -559,6 +562,12 @@ section .profile-card p {
 .profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats p {
   margin-right: 10px;
   color: #fff;
+}
+
+.profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats a {
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .profile-container .menu-wrapper .project-container .project-wrapper .projects-info .user-stats .photo-stats p .fas {

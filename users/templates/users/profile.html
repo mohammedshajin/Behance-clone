@@ -30,9 +30,12 @@
                 <div class="user-stats">
                     <div class="user">
                         <p>{{work.profile}}</p>
+                        
                     </div>
                     <div class="photo-stats">
                         <p><i class="fas fa-thumbs-up"></i>{{work.appreciate_set.all.count}}</p>
+                        <a style="color: white;" href="{% url 'updatework' work.id %}">Edit</a>
+                        <a style="color: white;" href="{% url 'deletework' work.id %}">Delete</a>
                         
                     </div>
                 </div>

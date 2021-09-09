@@ -90,4 +90,27 @@ def appreciate(request, pk):
         Appreciate.objects.create(profile=profile, work=work)
     
     return redirect('work_single', pk=work.id)
+
+@login_required(login_url="login")
+def updatework(request, pk):
+    profile = request.user.profile
+    work = Work.objects.get(id=pk)
+    form = Workform(instance=work)
+    if request.method == 'POST':
+        form=Workform(request.POST, request.FILES, instance=work)
+        if form.is_valid():
+            work = form.save()
+            
+            return redirect('profile')
+    
+    context = {'form':form}
+    return render(request, 'work/creatework.html', context)
+
+@login_required(login_url="login")
+def deletework(request, pk):
+    profile = request.user.profile
+    work = Work.objects.get(id=pk)
+    work.delete()
+    return redirect('profile')
+
     
