@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
+
 from .models import Follow
 
 from .forms import ProfileForm, MessageForm
@@ -150,7 +151,7 @@ def follow(request, pk):
     follow = Follow.objects.create(following=profile, follower=follower)
 
 
-    return redirect('other_profile', pk=follower.id)
+    return redirect(request.META.get('HTTP_REFERER'))
 
 @login_required(login_url='login')
 def unfollow(request, pk):
@@ -158,4 +159,4 @@ def unfollow(request, pk):
     follower = Profile.objects.get(id=pk)
     follow = Follow.objects.filter(following=profile, follower=follower)
     follow.delete()
-    return redirect('other_profile', pk=follower.id)
+    return redirect(request.META.get('HTTP_REFERER'))

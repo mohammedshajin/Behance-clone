@@ -269,3 +269,9 @@ header .right-nav .profile img {
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}

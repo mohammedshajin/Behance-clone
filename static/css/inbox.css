@@ -376,3 +376,10 @@ section .messaging-box-left-userlist .user span a {
   border-color: #0057ff;
 }
 /*# sourceMappingURL=inbox.css.map */
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}

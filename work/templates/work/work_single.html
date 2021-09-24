@@ -25,7 +25,15 @@
         {% endif %}
     </div>
     <ul>
-        <li>Follow</li>
+        {% if request.user.profile.id == work.profile.id %}
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+        {% else %}
+        {% if followed %}
+            <li><a href="{% url 'unfollow' work.profile.id %}">Unfollow</a></li>
+        {% else %}
+            <li><a href="{% url 'follow' work.profile.id %}">Follow</a></li>
+        {% endif %}
+        {% endif %}
     </ul>
 </div>
 <!-- First Section Project Name User Details Ends Here-->
@@ -73,9 +81,13 @@
             </div>
         <p>{{work.title}}</p>
         {% if request.user.profile.id == work.profile.id %}
-        <button><a href="{% url 'profile' %}">Follow</a></button>
+        <button><a href="{% url 'profile' %}">Profile</a></button>
         {% else %}
-        <button><a href="{% url 'other_profile' work.profile.id %}">Follow
+        {% if followed %}
+            <button><a href="{% url 'unfollow' work.profile.id %}">Unfollow</a></button>
+        {% else %}
+            <button><a href="{% url 'follow' work.profile.id %}">Follow</a></button>
+        {% endif %}
         {% endif %}
         <button class="hire-button">Hire Us</button>
         </div>
@@ -120,7 +132,15 @@
 <aside class="side-box">
     <div class="side-box-user-follow">
         <img src="{{work.profile.dp.url}}" alt="">
-        <small>Follow</small>
+        {% if request.user.profile.id == work.profile.id %}
+        <a href="{% url 'profile' %}"><small>Profile</small></a>
+        {% else %}
+        {% if followed %}
+            <a href="{% url 'unfollow' work.profile.id %}"><small>Unfollow</small></a>
+        {% else %}
+            <a href="{% url 'follow' work.profile.id %}"><small>Follow</small></a>
+        {% endif %}
+        {% endif %}
     </div>
     <div class="side-box-hire-us">
         <div>
@@ -136,12 +156,15 @@
         <small>Save</small>
     </div>
     <div class="side-box-appreciate">
+        {% if like %}
+        <div>
+            <i class="fas fa-thumbs-down"></i>
+        </div>
+        <a href="{% url 'appreciate' work.id %}"><small>Unappreciate</small></a>
+        {% else %}
         <div>
             <i class="fas fa-thumbs-up"></i>
         </div>
-        {% if like %}
-        <a href="{% url 'appreciate' work.id %}"><small>UnAppreciate</small></a>
-        {% else %}
         <a href="{% url 'appreciate' work.id %}"><small>Appreciate</small></a>
         {% endif %}
         

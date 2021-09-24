@@ -399,3 +399,10 @@ body {
   color: #6e6e6e;
 }
 /*# sourceMappingURL=signup.css.map */
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}

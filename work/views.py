@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from users.models import Profile
 from django.db.models import Q
 from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
+from users.models import Follow
 
 
 def work(request):
@@ -30,7 +31,6 @@ def work_single(request, pk):
     work = Work.objects.get(id=pk)
     
     profile = request.user.profile
-        
     form =Commentform()
 
     if request.method == 'POST':
@@ -48,7 +48,13 @@ def work_single(request, pk):
     else:
         like = False
 
-    context = {'work':work, 'form':form,'like': like}
+    follow = Follow.objects.filter(following=profile, follower=work.profile.id)
+    if follow:
+        followed = True
+    else:
+        followed = False
+
+    context = {'work':work, 'form':form,'like': like, 'followed': followed}
     return render(request, 'work/work_single.html', context)
 
 @login_required(login_url="login")

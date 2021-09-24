@@ -409,3 +409,10 @@ section .categories-container p .fas {
   padding-right: 4px;
 }
 /*# sourceMappingURL=discover.css.map */
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}

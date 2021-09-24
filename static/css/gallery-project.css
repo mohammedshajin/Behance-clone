@@ -537,3 +537,9 @@ section .project-adds-options .project-tags-list button:hover {
   color: #fff;
 }
 /*# sourceMappingURL=gallery-project.css.map */
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}

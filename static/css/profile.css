@@ -767,3 +767,10 @@ section .profile-card p {
   color: #191919;
 }
 /*# sourceMappingURL=profile.css.map */
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
