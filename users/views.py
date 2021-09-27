@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from . forms import CustomUserCreationForm
 
 
 from .models import Follow
@@ -55,10 +56,10 @@ def logoutUser(request):
     return redirect('login')
 
 def registerUser(request):
-    form = UserCreationForm()
+    form = CustomUserCreationForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit = False)
             user.username = user.username.lower()
@@ -69,7 +70,9 @@ def registerUser(request):
 
             return redirect('edit-account')
         else:
-            messages.success(request, 'An error occured')
+            for msg in form.error_messages:
+                messages.error(request, f"{msg}: {form.error_messages[msg]}")
+                print(msg)             
 
     context = {'form':form}
 

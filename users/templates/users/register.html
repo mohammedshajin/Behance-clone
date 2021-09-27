@@ -28,13 +28,22 @@
                     
                     {% for field in form %}
                     <div>
-                    <label for="email">{{field.label}}</label>
+                    <label>{{field.label}}</label>
                     {{field}}
                     </div>
                     {% endfor %}
+                    
                     <button type="submit" class="create-account-button">Create account</button>
+                    {% if messages %}
+                    <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
                 </div>    
             </form>
+            
             <!-- Signup Form Ends-->
             <!-- Signup Form Ends-->
             
