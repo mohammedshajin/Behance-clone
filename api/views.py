@@ -1,9 +1,10 @@
 from django.db.models import manager
 from rest_framework import serializers
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from work.models import Work
 from .serializers import WorkSerializer
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -27,4 +28,14 @@ def getWorks(request):
 def getWork(request, pk):
     work = Work.objects.get(id=pk)
     serializer = WorkSerializer(work, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def workAppreciate(request, pk):
+    work = Work.objects.get(id=pk)
+    user = request.user.profile
+    data = request.data
+    print('Data:', data)
+    serializers = WorkSerializer(work, many=False)
     return Response(serializer.data)
