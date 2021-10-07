@@ -13,5 +13,5 @@ urlpatterns = [
     path('', views.getRoutes),
     path('works/', views.getWorks),
     path('works/<str:pk>/', views.getWork),
-    path('works/<str:pk>/appreciate', views.workAppreciate),
+    path('works/<str:pk>/appreciate/', views.workAppreciate),
     ]
