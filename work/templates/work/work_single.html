@@ -89,7 +89,7 @@
             <button><a href="{% url 'follow' work.profile.id %}">Follow</a></button>
         {% endif %}
         {% endif %}
-        <button class="hire-button">Hire Us</button>
+        <button class="hire-button"><a href="{% url 'create-message' work.profile.id %}">Hire Us</a></button>
         </div>
 
         <div class="comments-shows">
