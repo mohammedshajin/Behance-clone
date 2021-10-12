@@ -89,7 +89,10 @@
             <button><a href="{% url 'follow' work.profile.id %}">Follow</a></button>
         {% endif %}
         {% endif %}
+        {% if request.user.profile.id == work.profile.id %}
+        {% else %}
         <button class="hire-button"><a href="{% url 'create-message' work.profile.id %}">Hire Us</a></button>
+        {% endif %}
         </div>
 
         <div class="comments-shows">
@@ -134,12 +137,19 @@
         {% endif %}
         {% endif %}
     </div>
+    {% if request.user.profile.id == work.profile.id %}
+        {% else %}
     <div class="side-box-hire-us">
+        
         <div>
             <i class="fas fa-envelope"></i>
         </div>
+        
+        
         <small><a href="{% url 'create-message' work.profile.id %}">Hire Us</a> </small>
+        
     </div>
+    {% endif %}
     <!-- <div class="side-box-tools"></div> -->
     <div class="side-box-save">
         <div>
