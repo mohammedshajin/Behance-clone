@@ -25,6 +25,15 @@ Then install the dependencies:
 Note the `(env)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment set up by `virtualenv`.
 
+Settings.py:
+
+Add your email and password to send welcome mail
+
+```sh
+EMAIL_HOST_USER = 'yourmail@mail.com'
+EMAIL_HOST_PASSWORD = 'ivcsyarovlaikbd'
+```
+
 Once `pip` has finished downloading the dependencies:
 ```sh
 (env)$ cd project
