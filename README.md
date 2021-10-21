@@ -28,6 +28,7 @@ session operates in a virtual environment set up by `virtualenv`.
 Settings.py:
 
 Add your email and password to send welcome mail
+If you are using gmail, Create an app password and use that password instead
 
 ```sh
 EMAIL_HOST_USER = 'yourmail@mail.com'
