@@ -177,7 +177,8 @@ header .right-nav .profile img {
 .project-container .project-wrapper {
   height: max-content;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
   justify-content: space-between;
 }

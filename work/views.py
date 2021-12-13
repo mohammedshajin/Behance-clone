@@ -12,7 +12,7 @@ from users.models import Follow
 def work(request):
     works = Work.objects.all()
     page = request.GET.get('page')
-    results = 6
+    results = 8
     paginator =Paginator(works, results)
     try:
         works = paginator.page(page)
